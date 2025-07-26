@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -91,7 +90,6 @@
     <input type="password" id="password" placeholder="Password">
     <button class="login-btn" onclick="submitForm()">Log In</button>
     </div>
-  </div>
 
   <script>
     function submitForm() {
