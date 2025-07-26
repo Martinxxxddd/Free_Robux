@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
   <h1><a href="#" style="display: none"></a></h1>
   <meta charset="UTF-8">
